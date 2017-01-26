@@ -22,25 +22,9 @@ module.exports = function (hookBody, controller, bot, callback) {
                     "channel": '@' + result.user.name,
                     "as_user": true,
                     "attachments": [{
-                        color: "warning",
+                        color: "good",
                         title: "Your '" + hookBody.pull_request.title + "' pull request was just Approved! ",
                         title_link: hookBody.review.html_url,
-                        callback_id: "teambot-local",
-                        attachment_type: 'default',
-                        actions: [
-                            {
-                                "name":"merge",
-                                "text": "Merge",
-                                "value": "merge",
-                                "type": "button"
-                            },
-                            {
-                                "name":"close",
-                                "text": "Close",
-                                "value": "close",
-                                "type": "button"
-                            }
-                    ]
                 }]
             }, function (error) {
                 return callback("Unable to get user info from slack: '" + error + "'");
