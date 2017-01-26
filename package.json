@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Teambot skill that will ping you when your pull request is ready to be merged.",
   "keywords": [
-    "teambot"
+    "ecosystem:teambot",
+    "teambot:slack"
   ],
   "author": "Teambot Team",
   "license": "MIT",
